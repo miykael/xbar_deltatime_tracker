@@ -57,9 +57,10 @@ Once the script is stored in the bitbar plugin folder and bitbar is refreshed, t
 The quickest way to get this done on a Mac OS X, is via the application **Automator**. The steps are as follows:
 
 1. Open **Automator** application and create a new file (either via the menubar "File > New" or directly with the `⌘N` shortcut).
-2. As document type, select **Quick Action**:
+2. As document type, select **Quick Action**:  
    <img src="static/automator_01.png" width=400px>
-3. As shown in the image below: First, select **Utilities** on the right. Second, select **Run Shell Script** and drag and drop it to the right part of the window. Third, select **no input** in the **Workflow receives** dropdown menu. Fourth, add the bash command to update the timedeltas, starting with the path to the script `track_timedelta.5s.sh`. In our case this bash command is `bash ~/bitbar/track_timedelta.5s.sh update_deltas` <img src="static/automator_02.png" width=800px>
+3. As shown in the image below: First, select **Utilities** on the right. Second, select **Run Shell Script** and drag and drop it to the right part of the window. Third, select **no input** in the **Workflow receives** dropdown menu. Fourth, add the bash command to update the timedeltas, starting with the path to the script `track_timedelta.5s.sh`. In our case this bash command is `bash ~/bitbar/track_timedelta.5s.sh update_deltas`  
+   <img src="static/automator_02.png" width=800px>
 4. Save this automator script under a name, e.g. `track_timedelta`.
 5. Redo point 3. but this time replace `update_deltas` in the bash command with `tracker_off` and store this new automator script under a seocnd name, e.g. `track_timedelta_off`.
 

@@ -12,10 +12,10 @@ The purpose of the timedelta tracker script is rather simple, to track the time 
 
 The application has **four different states**:
 
-- **Idle state** - <img src="static/time_00.png" height=14px>: When the script isn't tracking, the output in the menu bar is ∞.
-- **Green state** - <img src="static/time_01_green.png" height=14px>:  While the tracking time is in the first period (by default between 0 to 30min), the time is shown in green.
-- **Yellow state** - <img src="static/time_02_yellow.png" height=14px>:  While the tracking time is in the second period (by default between 30 to 45min), the time is shown in yellow.
-- **Red state** - <img src="static/time_03_red.png" height=14px>:  Once the tracking time is in the third and last period (by default after 45min), the time is shown in red.
+- **Idle state** - <img src="static/time_00.png" height=20px>: When the script isn't tracking, the output in the menu bar is ∞.
+- **Green state** - <img src="static/time_01_green.png" height=20px>:  While the tracking time is in the first period (by default between 0 to 30min), the time is shown in green.
+- **Yellow state** - <img src="static/time_02_yellow.png" height=20px>:  While the tracking time is in the second period (by default between 30 to 45min), the time is shown in yellow.
+- **Red state** - <img src="static/time_03_red.png" height=20px>:  Once the tracking time is in the third and last period (by default after 45min), the time is shown in red.
 
 Additionally to these four states, timedelta tracker also keeps a log of the last 6 (default) timedelta it computed. This log can be accessed by clicking on the bitbar section of timedelta in the menubar, and it looks as follows:
 
@@ -57,16 +57,15 @@ Once the script is stored in the bitbar plugin folder and bitbar is refreshed, t
 The quickest way to get this done on a Mac OS X, is via the application **Automator**. The steps are as follows:
 
 1. Open **Automator** application and create a new file (either via the menubar "File > New" or directly with the `⌘N` shortcut).
-2. As document type, select **Quick Action**: <img src="static/automator_01.png" width=300px>
-3. As shown in the image below: First, select **Utilities** on the right. Second, select **Run Shell Script** and drag and drop it to the right part of the window. Third, select **no input** in the **Workflow receives** dropdown menu. Fourth, add the bash command to update the timedeltas, starting with the path to the script `track_timedelta.5s.sh`. In our case this bash command is `bash ~/bitbar/track_timedelta.5s.sh update_deltas` <img src="static/automator_02.png" width=600px>
+2. As document type, select **Quick Action**:
+   <img src="static/automator_01.png" width=400px>
+3. As shown in the image below: First, select **Utilities** on the right. Second, select **Run Shell Script** and drag and drop it to the right part of the window. Third, select **no input** in the **Workflow receives** dropdown menu. Fourth, add the bash command to update the timedeltas, starting with the path to the script `track_timedelta.5s.sh`. In our case this bash command is `bash ~/bitbar/track_timedelta.5s.sh update_deltas` <img src="static/automator_02.png" width=800px>
 4. Save this automator script under a name, e.g. `track_timedelta`.
 5. Redo point 3. but this time replace `update_deltas` in the bash command with `tracker_off` and store this new automator script under a seocnd name, e.g. `track_timedelta_off`.
 
-As a last step, you'll need to assign keyboard shortcuts to these quick action automator scripts.
+As a last step, you'll need to assign keyboard shortcuts to these quick action automator scripts. You can do this by going to the keyboard settings, selecting the **Shortcuts** tab, selecting the **Services** section on the left, scrolling down to the **General** section on the right and assigning two unique keyboard shortcuts to `track_timedelta` and  `track_timedelta_off`.
 
 <img src="static/shortcut.png" width=600px>
-
-You can do this by going to the keyboard settings, selecting the **Shortcuts** tab, selecting the **Services** section on the left, scrolling down to the **General** section on the right and assigning two unique keyboard shortcuts to `track_timedelta` and  `track_timedelta_off`.
 
 I can recommend the shortcuts `⌘§` to update/start the timedelta tracking and `SHIFT+⌘§` to stop it.
 

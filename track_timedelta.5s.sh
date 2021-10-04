@@ -1,11 +1,11 @@
 #!/usr/bin/env bash
 
-# <bitbar.title>Track Time Delta</bitbar.title>
-# <bitbar.version>v0.1</bitbar.version>
-# <bitbar.author>Michael Notter</bitbar.author>
-# <bitbar.author.github>miykael</bitbar.author.github>
-# <bitbar.desc>Computes Time Delta to previous Timestamp</bitbar.desc>
-# <bitbar.dependencies>bash</bitbar.dependencies>
+# <xbar.title>Track Time Delta</xbar.title>
+# <xbar.version>v0.1</xbar.version>
+# <xbar.author>Michael Notter</xbar.author>
+# <xbar.author.github>miykael</xbar.author.github>
+# <xbar.desc>Computes Time Delta to previous Timestamp</xbar.desc>
+# <xbar.dependencies>bash</xbar.dependencies>
 
 # Specify working file for time deltas
 FILENAMES='/tmp/timedeltas.rst'

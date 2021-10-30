@@ -1,7 +1,5 @@
 # xbar Deltatime Tracker
 
-[![GitHub size](https://github-size-badge.herokuapp.com/miykael/xbar_deltatime_tracker.svg)](https://github.com/miykael/xbar_deltatime_tracker/archive/master.zip)
-
 This repository contains a script that can help to keep track of the time passed between two events. Everything relevant to do this is stored in the file `track_timedelta.5s.sh`. The recommended way to use this script is to combine it with [xbar](https://github.com/matryer/xbar), an application for Mac OS X which allows the printing of output directly into the menu bar.
 
 
